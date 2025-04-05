@@ -3,7 +3,7 @@
 
 __global__ void add(int *a, int *b, int *c) // Kernel function to add two arrays
 {
-    int index = blockIdx.x; // handle index of the block
+    int index = blockIdx.x; // handle index of the block (CUDA C allows a group of blocs in two dimensions)
     if (index < N) // Check if the index is within bounds
     {
         c[index] = a[index] + b[index]; // Perform the addition
